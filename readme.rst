@@ -13,6 +13,12 @@ issues, as well as missing features.
 Installation
 ************
 Require internet connection for hosted Ajax and Bootstrap CDN.
-clone project to htdocs/ directory of XAMPP.
+
+
+Clone project to htdocs/ directory of XAMPP.
+
+
 Import the .sql file into your Mysql database.
+
+
 Go to localhost/Blog_PhpCodeigniter in your browser.
