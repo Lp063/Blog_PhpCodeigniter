@@ -7,7 +7,7 @@
         <img class="post-thumb" src="<?php echo site_url();?>assets/images/posts/<?php echo $post['post_image'];?>">
       </div>
       <div class="col-md-9">
-        <div class="panel panel-default"><small class="post-date"><?php echo $post['created_at']." in ".$post['name'];?></small></div>
+        <div class="well well-sm"><small class="post-date"><?php echo $post['created_at']." in ".$post['name'];?></small></div>
         <p><?php echo word_limiter  ($post['body'],60);?></p>
         <br/><br/>
         <p>

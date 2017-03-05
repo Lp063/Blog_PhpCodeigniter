@@ -1,7 +1,7 @@
 <h2>
     <?php echo $post['title']; ?>
 </h2>
-<div class="panel panel-default"><small class="post-date"><?php echo $post['created_at'];?></small></div>
+<div class="well well-sm"><small class="post-date"><?php echo $post['created_at'];?></small></div>
 <img src="<?php echo site_url();?>assets/images/posts/<?php echo $post['post_image'];?>">
 <div class="post-body">
     <?php echo $post['body'];?>
