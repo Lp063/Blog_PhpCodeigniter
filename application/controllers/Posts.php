@@ -42,7 +42,7 @@ class Posts extends CI_Controller{
 
         }else{
             $config['upload_path']='./assets/images/posts';
-            $config['allowed_types']='gif|jpeg|png';
+            $config['allowed_types']='gif|jpg|png';
             $config['max_size']='2048';
             $config['max_width']='500';
             $config['max_height']='500';
@@ -55,7 +55,7 @@ class Posts extends CI_Controller{
             }else{
                 echo "HAHAHAH";
                 $data = array('upload_data' => $this->upload->data());
-                $post_image = $_FILES['userfile']['name'];
+                $post_image = $_FILES['postimage']['name'];
                 //echo "Else";
                 //echo "<pre>"; echo print_r($_FILES); echo "</pre>";
                // exit();

@@ -20,7 +20,7 @@
          </select>
     </div>
     <div class="form-group">
-        <input type="file" name="userfile" size="20">
+        <input type="file" name="postimage" size="20">
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
