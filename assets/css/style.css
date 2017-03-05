@@ -3,3 +3,7 @@ body{
     margine:3px 0;
     display:block;
 }
+
+.post-thumb{
+  width:100%;
+}
