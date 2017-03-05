@@ -29,6 +29,7 @@ class Posts extends CI_Controller{
     }
 
     function create(){
+        echo "<pre>";print_r($_FILES);echo "</pre>";exit();
         $data['title']="Create Post";
         $data['categories']=$this->post_model->get_categories();
 
@@ -49,13 +50,12 @@ class Posts extends CI_Controller{
             $this->load->library('upload',$config);
 
             if(!$this->upload->do_upload()){
-                echo "Not";
                 $errors = array('error' => $this->upload->display_errors());
                 $post_image = 'noimage.jpg';
             }else{
-                echo "HAHAHAH";
+                //echo "<pre>";print_r($_FILES);echo "</pre>";exit();
                 $data = array('upload_data' => $this->upload->data());
-                $post_image = $_FILES['postimage']['name'];
+                $post_image = $_FILES['userfiles']['name'];
                 //echo "Else";
                 //echo "<pre>"; echo print_r($_FILES); echo "</pre>";
                // exit();
