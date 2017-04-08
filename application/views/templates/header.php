@@ -6,11 +6,13 @@
         <link rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap.css">
         <link rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap-theme.css">
         
-        <link rel="stylesheet" href="<?php echo base_url();?>assets/js/javascript.js">
-        <link rel="stylesheet" href="<?php echo base_url();?>assets/js/bootstrap.js">
+        
     </head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script-->
     <script src="http://cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
+    <script src="<?php echo base_url();?>assets/js/javascript.js"></script>
+    <script src="<?php echo base_url();?>assets/js/bootstrap.js"></script>
+    <script src="<?php echo base_url();?>assets/js/jquery-3.1.1.min.js"></script>
     <body>
         <nav class="navbar navbar-default">
             <div class="container-fluid">

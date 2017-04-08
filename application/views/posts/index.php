@@ -9,8 +9,8 @@
       </div>
       <div class="col-md-9">
         <div class="well well-sm"><small class="post-date"><?php echo $post['created_at']." in ".$post['name'];?></small></div>
-        <p><?php echo word_limiter  ($post['body'],60);?></p>
-        <br/><br/>
+        <p><?php echo word_limiter  ($post['body'],130);?></p>
+        <br/>
         <p>
             <a class="btn btn-default" id="<?php echo $post['title'];?>" href="<?php echo site_url('/post/'.$post['slug']);?> " >
                 Read More
