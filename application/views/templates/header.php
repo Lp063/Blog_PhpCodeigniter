@@ -13,7 +13,7 @@
     <script src="<?php echo base_url();?>assets/js/javascript.js"></script>
     <script src="<?php echo base_url();?>assets/js/bootstrap.js"></script>
     <script src="<?php echo base_url();?>assets/js/jquery-3.1.1.min.js"></script>
-    <body>
+    <body <?php if(isset($bgimg)){echo "background='".$bgimg."' ";}?> style="margin: 0; width:100%; height: 100%; background-position: center;background-repeat: no-repeat;background-size: cover;">
         <nav class="navbar navbar-default">
             <div class="container-fluid">
                 <div class="navbar-header">
