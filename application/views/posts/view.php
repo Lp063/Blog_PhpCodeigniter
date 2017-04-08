@@ -1,3 +1,4 @@
+<div class="container" >
 <h2>
     <?php echo $post['title']; ?>
 </h2>
@@ -11,4 +12,5 @@
         <input type="submit" value="delete" class="btn btn-danger">
     </form>
 
+</div>
 </div>

@@ -1,3 +1,4 @@
+<div class="container" >
 <h2>
     <?= $title; ?>
 </h2>
@@ -24,3 +25,4 @@
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+</div>
