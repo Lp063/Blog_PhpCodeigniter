@@ -1,7 +1,8 @@
 <html>
     <head>
-        <title>Lp</title>
+        <title>Lohit Pereira</title>
         <!--link rel="stylesheet" href="https://bootswatch.com/superhero/bootstrap.min.css"-->
+        <link rel="icon" href="<?=base_url()?>/assets/images/logo.png" type="image/gif">
         <link rel="stylesheet" href="<?php echo base_url();?>assets/css/style.css">
         <link rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap.css">
         <link rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap-theme.css">
