@@ -42,33 +42,17 @@ class Posts extends CI_Controller{
             $this->load->view('templates/footer');
 
         }else{
-        	echo"<pre>";
-        	print_r($_POST);
-        	print_r($_FILES);
-        	echo"<pre>";
-        	$fileName = $_FILES['userfiles']['name'];
-        	$postsImg = getcwd()."/assets/images/posts/";
-        	move_uploaded_file($_FILES['userfiles']['tmp_name'],$postsImg.$fileName);
-        	/*
-            $config['upload_path'] = './assets/images/posts';
-            $config['allowed_types'] = 'gif|jpg|png';
-            $config['max_size'] = '2048';
-            $config['max_width'] = '500';
-            $config['max_height'] = '500';
-            $this->load->library('upload',$config);
-
-            if(!$this->upload->do_upload()){
-                $errors = array('error' => $this->upload->display_errors());
-                $post_image = 'noimage.jpg';
-            }else{
-                //echo "<pre>";print_r($_FILES);echo "</pre>";exit();
-                $data = array('upload_data' => $this->upload->data());
-                $post_image = $_FILES['userfiles']['name'];
-            }
-            */
-		exit;
-            $this->post_model->create_post($post_image);
-            redirect('posts/index');
+		$fileName = $_FILES['userfiles']['name'];
+		$postsImg = getcwd()."/assets/images/posts/";
+		if($_FILES['userfiles']['tmp_name'] != NULL || $_FILES['userfiles']['tmp_name'] !=""){
+			//sudo chmod -R 0777 /opt/lampp/htdocs/Blog_PhpCodeigniter/assets/images/posts
+			move_uploaded_file($_FILES['userfiles']['tmp_name'],$postsImg.$fileName);
+			$post_image = $_FILES['userfiles']['name'];
+		}else{
+			$post_image = 'noimage.jpg';
+		}
+		$this->post_model->create_post($post_image);
+		redirect('posts/index');
         }
     }
 
