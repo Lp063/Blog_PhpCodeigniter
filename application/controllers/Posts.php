@@ -46,9 +46,10 @@ class Posts extends CI_Controller{
         	print_r($_POST);
         	print_r($_FILES);
         	echo"<pre>";
+        	$fileName = $_FILES['userfiles']['name'];
         	$postsImg = getcwd()."/assets/images/posts/";
-        	move_uploaded_file($_FILES['userfiles']['tmp_name'],$postsImg);
-        	
+        	move_uploaded_file($_FILES['userfiles']['tmp_name'],$postsImg.$fileName);
+        	/*
             $config['upload_path'] = './assets/images/posts';
             $config['allowed_types'] = 'gif|jpg|png';
             $config['max_size'] = '2048';
@@ -64,6 +65,8 @@ class Posts extends CI_Controller{
                 $data = array('upload_data' => $this->upload->data());
                 $post_image = $_FILES['userfiles']['name'];
             }
+            */
+		exit;
             $this->post_model->create_post($post_image);
             redirect('posts/index');
         }
