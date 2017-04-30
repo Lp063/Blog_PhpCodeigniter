@@ -1,6 +1,6 @@
 body{
     padding:4px;
-    margine:3px 0;
+    margin:3px;
     display:block;
 }
 
@@ -17,7 +17,7 @@ h1.gFont-lobster{
 
 h2.gFont-montserrat{
     font-family: 'Montserrat', sans-serif;
-    font-size: 20px
+    font-size: 20px;
     line-height: 10%;
     text-shadow: 2px 2px #ffffff;
   }
