@@ -28,9 +28,11 @@
                         <li><a href="<?php echo base_url(); ?>" class="navlink">Home</a></li>
                         <li><a href="<?php echo base_url(); ?>about" class="navlink">About</a></li>
                         <li><a href="<?php echo base_url(); ?>posts/index" class="navlink">Blog</a></li>
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a href="<?php echo base_url(); ?>posts/create" class="navlink">Create Post</a></li>
-                        </ul>
+                        <li><a href="<?php echo base_url(); ?>categories/index" class="navlink">Categories</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="<?php echo base_url(); ?>posts/create" class="navlink">Create Post</a></li>
+                        <li><a href="<?php echo base_url(); ?>categories/create" class="navlink">Create Category</a></li>
                     </ul>
                 </div>
             </div>
