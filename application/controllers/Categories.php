@@ -37,5 +37,6 @@ class Categories extends CI_Controller{
     
     public function posts(){
         $data['title'] = $this->category_model->get_category($id)->name;
+        
     }
 }
