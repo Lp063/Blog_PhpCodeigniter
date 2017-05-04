@@ -26,7 +26,9 @@ class Category_model extends CI_Model{
         return $query->result_array();
     }
     
-    public function get_category(){
+    public function get_category($id){
+        $query = $this->db->get_where('categories',array('id'=>$id));
         
+        return $query->row();
     }
 }
