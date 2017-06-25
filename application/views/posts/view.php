@@ -15,6 +15,16 @@
     </form>
 </div>
 <hr>
+<h3>Comments</h3>
+    <?php if($comments): ?>
+        <?php foreach($comments as $comment): ?>
+            <div class="comments">
+                <h5><?php echo $comment['body'];?></h5> [By - <?php echo $comment['name'];?>]
+            </div><br>
+        <?php endforeach; ?>
+    <?php else: ?>
+    <?php endif;?>
+<hr>
 <h3>Add Comment</h3>
 <?php echo form_open('comments/posts/'.$post['id']);?>
     <?php echo "<div style='color: red;'><strong>".validation_errors()."</strong></div>";?>
