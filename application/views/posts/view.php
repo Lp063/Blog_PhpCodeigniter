@@ -13,6 +13,24 @@
     <?php echo form_open('/posts/delete/'.$post['id']);?>
         <input type="submit" value="delete" class="btn btn-danger">
     </form>
-
 </div>
+<hr>
+<h3>Add Comment</h3>
+<?php echo form_open('comments/posts/'.$post['id']);?>
+    <?php echo "<div style='color: red;'><strong>".validation_errors()."</strong></div>";?>
+    <div class="form_group">
+        <label>Name</label>
+        <input type="text" name="name" class="form-control">
+    </div>
+    <div class="form_group">
+        <label>Email</label>
+        <input type="text" name="email" class="form-control">
+    </div>
+    <div class="form_group">
+        <label>Body</label>
+        <textarea name="body" class="form-control"></textarea>
+    </div>
+    <input type="hidden" name="slug" value="<?php echo $post['slug'];?>"><br>
+    <button type="Submit" value="Submit" class="btn btn-primary">Submit</button>
+</form>
 </div>

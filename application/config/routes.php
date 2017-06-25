@@ -55,6 +55,8 @@ $route['posts']='posts/index';
 $route['posts']='posts/create';
 $route['posts/update']='posts/update';
 
+$route['comments/posts/(:any)'] = 'comments/create/$1';
+
 $route['default_controller'] = 'pages/view';
 
 $routes['categories'] = 'categories/index';
