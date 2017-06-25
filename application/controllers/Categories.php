@@ -31,7 +31,7 @@ class Categories extends CI_Controller{
         }else{
             $this->category_model->create_category();
             
-            redirect('categories');
+            redirect('categories/index');
         }
     }
     
