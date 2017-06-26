@@ -31,10 +31,16 @@
                         <li><a href="<?php echo base_url(); ?>categories/index" class="navlink">Categories</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
+                         <li><a href="<?php echo base_url(); ?>users/register" class="navlink">Register</a></li>
                         <li><a href="<?php echo base_url(); ?>posts/create" class="navlink">Create Post</a></li>
                         <li><a href="<?php echo base_url(); ?>categories/create" class="navlink">Create Category</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
+       <?php 
+        if($this->session->flashdata('flash_message')){
+            echo $this->session->flashdata('flash_message');
+        }
+       ?>
         

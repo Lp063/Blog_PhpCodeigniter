@@ -54,6 +54,8 @@ class Posts extends CI_Controller{
 			$post_image = 'noimage.jpg';
 		}
 		$this->post_model->create_post($post_image);
+                $flash_message = "<div class='alert alert-success'><strong>Success!</strong> Your post has been created.</div>";
+                $this->session->set_flashdata('flash_message',$flash_message);
 		redirect('posts/index');
         }
     }
@@ -79,6 +81,8 @@ class Posts extends CI_Controller{
 
     public function update_post(){
        $this->post_model->update_post();
+       $flash_message = "<div class='alert alert-success'><strong>Success!</strong> Your post has been Updated.</div>";
+        $this->session->set_flashdata('flash_message',$flash_message);
         redirect('posts/index');
     }
 }

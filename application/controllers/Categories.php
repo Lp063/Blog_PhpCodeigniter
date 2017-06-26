@@ -30,7 +30,9 @@ class Categories extends CI_Controller{
             $this->load->view('templates/footer');
         }else{
             $this->category_model->create_category();
-            
+            $this->post_model->create_post($post_image);
+            $flash_message = "<div class='alert alert-success'><strong>Success!</strong> Your category has been created.</div>";
+            $this->session->set_flashdata('flash_message',$flash_message);
             redirect('categories/index');
         }
     }
