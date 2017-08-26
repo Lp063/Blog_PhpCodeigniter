@@ -240,7 +240,7 @@ class CI_Loader {
 		elseif (is_array($model))
 		{
 			foreach ($model as $key => $value)
-			{
+			{   
 				is_int($key) ? $this->model($value, '', $db_conn) : $this->model($key, $value, $db_conn);
 			}
 
