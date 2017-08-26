@@ -19,11 +19,14 @@
         <nav>
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="<?php echo base_url(); ?>">
-                        <img alt="Brand" height="25" width="25" src="<?php echo base_url()."assets/images/logo.png";?>">
-                    </a>
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigationbar">
+                    <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
+                  </button>
+                  <a class="navbar-brand" href="<?php echo base_url(); ?>">
+                      <img alt="Brand" height="25" width="25" src="<?php echo base_url()."assets/images/logo.png";?>">
+                  </a>
                 </div>
-                <div id="navbar">
+                <div class="collapse navbar-collapse" id="navigationbar">
                     <ul class="nav navbar-nav">
                         <li><a href="<?php echo base_url(); ?>" class="navlink">Home</a></li>
                         <li><a href="<?php echo base_url(); ?>about" class="navlink">About</a></li>
@@ -31,7 +34,6 @@
                         <li><a href="<?php echo base_url(); ?>categories/index" class="navlink">Categories</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                         <li><a href="<?php echo base_url(); ?>users/register" class="navlink">Register</a></li>
                         <li><a href="<?php echo base_url(); ?>posts/create" class="navlink">Create Post</a></li>
                         <li><a href="<?php echo base_url(); ?>categories/create" class="navlink">Create Category</a></li>
                     </ul>
