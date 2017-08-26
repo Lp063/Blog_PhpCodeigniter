@@ -20,7 +20,7 @@
             <div class="container-fluid">
                 <div class="navbar-header">
                   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigationbar">
-                    <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
+                    <span class="glyphicon glyphicon-th" aria-hidden="false"></span>
                   </button>
                   <a class="navbar-brand" href="<?php echo base_url(); ?>">
                       <img alt="Brand" height="25" width="25" src="<?php echo base_url()."assets/images/logo.png";?>">
