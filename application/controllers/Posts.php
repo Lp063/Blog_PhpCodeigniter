@@ -7,9 +7,18 @@
  */
 
 class Posts extends CI_Controller{
-    public function index(){
+    public function __construct(){
+        parent::__construct();
+        $this->load->library('pagination');
+    }
+    public function index($offset = 0){
+        $config['base_url'] = base_url().'posts/index';
+        $config['total_rows'] = $this->db->count_all('posts');
+        $config['per_page'] = 3;
+        $config['uri_segment'] = 3;
+        $this->pagination->initialize($config);
         $data['title']= "Latest Posts";
-        $data['posts']=$this->post_model->get_post();
+        $data['posts']=$this->post_model->get_post(FALSE,$config['per_page'],$offset);
 
         $this->load->view('templates/header');
         $this->load->view('posts/index',$data);
@@ -31,8 +40,8 @@ class Posts extends CI_Controller{
     }
 
     function create(){
-        if(!$this->session->userdata('logged_id')){
-            redirect('users/login');
+        if($this->session->userdata('logged_id') == 0){
+            //redirect('users/login');
         }
         //echo "<pre>";print_r($_FILES);echo "</pre>";exit();
         $data['title']="Create Post";

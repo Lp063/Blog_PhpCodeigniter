@@ -51,8 +51,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 
 $route['post/(:any)']='posts/view/$1';
-$route['posts']='posts/index';
-$route['posts']='posts/create';
+$route['posts/index']='posts/index';
+$route['posts/create']='posts/create';
 $route['posts/update']='posts/update';
 
 $route['comments/posts/(:any)'] = 'comments/create/$1';
