@@ -31,6 +31,9 @@ class Posts extends CI_Controller{
     }
 
     function create(){
+        if(!$this->session->userdata('logged_id')){
+            redirect('users/login');
+        }
         //echo "<pre>";print_r($_FILES);echo "</pre>";exit();
         $data['title']="Create Post";
         $data['categories']=$this->post_model->get_categories();
@@ -61,12 +64,19 @@ class Posts extends CI_Controller{
     }
 
     public function delete($id){
+        if(!$this->session->userdata('logged_id')){
+            redirect('users/login');
+        }
         $this->post_model->delete_post($id);
         redirect('posts/index');
     }
 
     public function edit($slug){
         $data['post']= $this->post_model->get_post($slug);
+        
+        if(!$this->session->userdata('user_id') != $this->post_model->get_post($slug)['user_id']){
+            redirect('posts');
+        }
         $data['categories']=$this->post_model->get_categories();
 
         if(empty($data['post'])){
@@ -80,6 +90,9 @@ class Posts extends CI_Controller{
     }
 
     public function update_post(){
+        if(!$this->session->userdata('logged_id')){
+            redirect('users/login');
+        }
        $this->post_model->update_post();
        $flash_message = "<div class='alert alert-success'><strong>Success!</strong> Your post has been Updated.</div>";
         $this->session->set_flashdata('flash_message',$flash_message);

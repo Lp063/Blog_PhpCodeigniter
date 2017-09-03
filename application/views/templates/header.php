@@ -34,8 +34,15 @@
                         <li><a href="<?php echo base_url(); ?>categories/index" class="navlink">Categories</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
+                        <?php if(!$this->session->userdata('logged_in')) : ?>
+                        <li><a href="<?php echo base_url(); ?>users/login" class="navlink">Login</a></li>
+                        <li><a href="<?php echo base_url(); ?>users/register" class="navlink">Register</a></li>
+                        <?php endif; ?>
+                        <?php if($this->session->userdata('logged_in')) : ?>
                         <li><a href="<?php echo base_url(); ?>posts/create" class="navlink">Create Post</a></li>
                         <li><a href="<?php echo base_url(); ?>categories/create" class="navlink">Create Category</a></li>
+                        <li><a href="<?php echo base_url(); ?>users/logout" class="navlink">Log Out</a></li>
+                        <?php endif; ?>
                     </ul>
                 </div>
             </div>
