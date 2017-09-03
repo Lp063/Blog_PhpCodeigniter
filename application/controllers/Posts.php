@@ -74,7 +74,7 @@ class Posts extends CI_Controller{
     public function edit($slug){
         $data['post']= $this->post_model->get_post($slug);
         
-        if(!$this->session->userdata('user_id') != $this->post_model->get_post($slug)['user_id']){
+        if($this->session->userdata('user_id') != $this->post_model->get_post($slug)['user_id']){
             redirect('posts');
         }
         $data['categories']=$this->post_model->get_categories();
@@ -90,7 +90,8 @@ class Posts extends CI_Controller{
     }
 
     public function update_post(){
-        if(!$this->session->userdata('logged_id')){
+        //echo '<pre>';print_r($_SESSION); echo $this->session->userdata('logged_id');exit();
+        if($this->session->userdata('logged_id') === 0){
             redirect('users/login');
         }
        $this->post_model->update_post();
