@@ -10,11 +10,7 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script-->
-    <script src="http://cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
-    <script src="<?php echo base_url();?>assets/js/javascript.js"></script>
-    <script src="<?php echo base_url();?>assets/js/bootstrap.js"></script>
-    <script src="<?php echo base_url();?>assets/js/jquery-3.1.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <body <?php if(isset($bgimg)){echo "background='".$bgimg."' ";}?> style="margin: 0; width:100%; height: 100%; background-position: center;background-repeat: no-repeat;background-size: cover;">
         <nav>
             <div class="container-fluid">

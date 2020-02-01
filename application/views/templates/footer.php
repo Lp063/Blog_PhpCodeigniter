@@ -1,4 +1,10 @@
         
+        <script src="http://cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
+        <script src="<?php echo base_url();?>assets/js/javascript.js"></script>
+        <script src="<?php echo base_url();?>assets/js/bootstrap.js"></script>
+        <script src="<?php echo base_url();?>assets/js/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/json2html-master/jquery.json2html.js"></script>
+        <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/json2html-master/json2html.js"></script>
         <script>
             CKEDITOR.replace('editor1');
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
