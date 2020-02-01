@@ -7,7 +7,8 @@
         <link rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap.css">
         <link rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap-theme.css">
         <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet"> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
