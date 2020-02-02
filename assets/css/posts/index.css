@@ -1,0 +1,39 @@
+.blog-post-thumbnail{
+    height: 33%;
+    border-radius: 8px 8px 0px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .blog-author-date{
+    margin-top: 3% !important;
+    margin-bottom: 2%;
+    color:#a6a6a6;
+  }
+  
+  .blog-author.user-dp{
+    height:40px !important;
+    width:40px  !important;
+  }
+  
+  .blog-post-title{
+    font-family: 'Varela Round', sans-serif;
+    font-size: xx-large;
+  }
+  
+  .blog-post-summary{
+    font-family: Montserrat !important;
+  }
+  
+  .blog-post-card{
+    padding-top: 3%;
+    cursor: pointer;
+  }
+  
+  .blog-post-card-lower-half{
+    background-color: #fbfbfb;
+    padding-bottom: 5%;
+    border-radius: 0px 0px 8px 8px;
+    max-height: 36%;
+    height: 36%;
+  }

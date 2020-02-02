@@ -12,17 +12,39 @@ class Posts extends CI_Controller{
         $this->load->library('pagination');
     }
     public function index($offset = 0){
-        $config['base_url'] = base_url().'posts/index';
+
+        /* $config['base_url'] = base_url().'posts/index';
         $config['total_rows'] = $this->db->count_all('posts');
         $config['per_page'] = 3;
         $config['uri_segment'] = 3;
-        $this->pagination->initialize($config);
+        $this->pagination->initialize($config); */
         $data['title']= "Latest Posts";
-        $data['posts']=$this->post_model->get_post(FALSE,$config['per_page'],$offset);
+        /* $data['posts']=$this->post_model->get_post(FALSE,$config['per_page'],$offset); */
+        
+        $assets['assets']=[
+            "js"=>[
+                base_url()."assets/js/posts/index.js"
+            ],
+            "css"=>[
+                base_url()."assets/css/posts/index.css"
+            ]
+        ];
 
-        $this->load->view('templates/header');
+        $this->load->view('templates/header',$assets);
         $this->load->view('posts/index',$data);
-        $this->load->view('templates/footer');
+        $this->load->view('templates/footer',$assets);
+    }
+
+    public function apiloadPosts(){
+        $response["success"] = 0;
+
+        $data = $this->post_model->loadPosts($this->input->post('from'));
+        if (count($data)) {
+            $response["success"] = 1;
+        }
+        $response["data"] = $data;
+
+        echo json_encode($response);
     }
 
     public function view($slug= NULL){

@@ -26,6 +26,27 @@ class Post_model extends CI_Model{
         return $query->row_array();
     }
 
+    public function loadPosts($from){
+        if($from>0){
+            $pagination="limit ".$from.", 9";
+        }else{
+            $pagination = "limit 9";
+        }
+        $query = $this->db->query("SELECT * FROM `posts` ".$pagination);
+        $result = $query->result_array();
+        foreach ($result as $key => $post) {
+            $return[]=[
+                "id"=>$post["id"],
+                "blogthumbnail"=>base_url()."assets/images/posts/".$post["post_image"],
+                "blogsource"=>"arstechnica.com",
+                "blogpostdate"=> date("jS M Y",strtotime($post["created_at"])),
+                "blogtitle"=>$post["title"],
+                "blogsummary"=> substr($post["body"],0,150)
+            ];
+        }
+        return $return;
+    }
+
     public function create_post($post_image){
         $slug = url_title($this->input->post('title'));
         $data = array(

@@ -6,12 +6,16 @@
         <link rel="stylesheet" href="<?php echo base_url();?>assets/css/style.css">
         <link rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap.css">
         <link rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap-theme.css">
+        <?php 
+            foreach ($assets["css"] as $key => $cssAsset) {
+                echo '<link rel="stylesheet" href="'.$cssAsset.'">';
+            }
+        ?>
         <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
     </head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <body <?php if(isset($bgimg)){echo "background='".$bgimg."' ";}?> style="margin: 0; width:100%; height: 100%; background-position: center;background-repeat: no-repeat;background-size: cover;">
         <nav>
             <div class="container-fluid">
