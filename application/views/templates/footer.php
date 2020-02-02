@@ -8,8 +8,10 @@
         <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/json2html-master/json2html.js"></script>
 
         <?php 
-            foreach ($assets["js"] as $key => $jsAsset) {
-                echo '<script type="text/javascript" src="'.$jsAsset.'"></script>';
+            if ($assets) {
+                foreach ($assets["js"] as $key => $jsAsset) {
+                    echo '<script type="text/javascript" src="'.$jsAsset.'"></script>';
+                }
             }
         ?>
 

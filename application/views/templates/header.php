@@ -7,8 +7,10 @@
         <link rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap.css">
         <link rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap-theme.css">
         <?php 
-            foreach ($assets["css"] as $key => $cssAsset) {
-                echo '<link rel="stylesheet" href="'.$cssAsset.'">';
+            if($assets){
+                foreach ($assets["css"] as $key => $cssAsset) {
+                    echo '<link rel="stylesheet" href="'.$cssAsset.'">';
+                }
             }
         ?>
         <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">

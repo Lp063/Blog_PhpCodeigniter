@@ -41,7 +41,8 @@ class Post_model extends CI_Model{
                 "blogsource"=>"arstechnica.com",
                 "blogpostdate"=> date("jS M Y",strtotime($post["created_at"])),
                 "blogtitle"=>$post["title"],
-                "blogsummary"=> substr($post["body"],0,150)
+                "blogsummary"=> substr($post["body"],0,150),
+                "href"=>base_url()."posts/view/".$post["slug"]
             ];
         }
         return $return;
