@@ -56,7 +56,7 @@ class Posts extends CI_Controller{
         }
 
         $data['title']=$data['post']['title'];
-
+        $data['comments']=[];
         $assets['assets']=[
             "js"=>[
             ],
