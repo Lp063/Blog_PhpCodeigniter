@@ -12,10 +12,19 @@ class Users extends CI_Controller{
         $this->form_validation->set_rules('password','Password','required');
         $this->form_validation->set_rules('password2','Confirm Password','matches[password]');
         
+        $data['assets']=[
+            "js"=>[
+                
+            ],
+            "css"=>[
+                
+            ]
+        ];
+
         if($this->form_validation->run() == FALSE){
             
             //echo "<pre>";print_r($_POST);echo "</pre>".$enc_password;exit;
-            $this->load->view('templates/header');
+            $this->load->view('templates/header',$data);
             $this->load->view('users/register',$data);
             $this->load->view('templates/footer');
         }else{
@@ -31,11 +40,20 @@ class Users extends CI_Controller{
         //echo "<pre>";print_r($_POST);echo "</pre>";
         $this->form_validation->set_rules('username','Username','required');
         $this->form_validation->set_rules('password','Password','required');
+
+        $data['assets']=[
+            "js"=>[
+                
+            ],
+            "css"=>[
+                
+            ]
+        ];
         
         if($this->form_validation->run() == FALSE){
             
             //echo "<pre>";print_r($_POST);echo "</pre>".$enc_password;exit;
-            $this->load->view('templates/header');
+            $this->load->view('templates/header',$data);
             $this->load->view('users/login',$data);
             $this->load->view('templates/footer');
         }else{

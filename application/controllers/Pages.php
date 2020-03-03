@@ -11,10 +11,19 @@ class Pages extends CI_Controller{
         if(!file_exists(APPPATH.'views/pages/'.$page.'.php')){
             show_404();
         }
-	if($page == 'home'){
-		$data['bgimg'] = base_url()."assets/images/city.jpg";
-	}
-	
+        if($page == 'home'){
+            $data['bgimg'] = base_url()."assets/images/city.jpg";
+        }
+        
+        $data['assets']=[
+            "js"=>[
+                
+            ],
+            "css"=>[
+                
+            ]
+        ];
+
         $data['title']= ucfirst($page);
         //echo"<pre>";print_r($data);echo"</pre>";
         $this->load->view('templates/header',$data);
