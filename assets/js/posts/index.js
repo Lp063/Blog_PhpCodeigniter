@@ -4,7 +4,7 @@ $(document).ready(function(){
 
 function loadBlogPostCards(isScrolling,postsInView){
     
-    var blogPostList ={"<>":"div","id":"post_${id}","class":"col-md-4 blog-post-card","html":[
+    var blogPostList ={"<>":"div","id":"post_${id}","class":"col-md-4 blog-post-card clickUrl","url":"${href}","html":[
         {"<>":"div","id":"post_${id}_thumbnail","class":"col-md-12 blog-post-thumbnail","style":"background-image:url(${blogthumbnail});","html":function($object,index){
             return '<img class="alwaysHidden" onerror="imageUnavailable(\'image\',\'post_'+$object.id+'_thumbnail\',\'\')" src="'+$object.blogthumbnail+'" >';
         }},
@@ -29,3 +29,7 @@ function loadBlogPostCards(isScrolling,postsInView){
         }
     });
 }
+
+$(document).on("click",".clickUrl",function(){
+    window.location.href = $(this).attr("url");
+});
