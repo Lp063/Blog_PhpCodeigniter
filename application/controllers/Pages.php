@@ -7,6 +7,12 @@
  */
 
 class Pages extends CI_Controller{
+
+    public function __construct(){
+        parent::__construct();
+        $this->load->library('session');
+    }
+
     public function view($page = 'home'){
         if(!file_exists(APPPATH.'views/pages/'.$page.'.php')){
             show_404();
@@ -16,6 +22,9 @@ class Pages extends CI_Controller{
         }
         
         $data['assets']=[
+            "meta"=>[
+
+            ],
             "js"=>[
                 
             ],

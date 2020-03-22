@@ -1,0 +1,57 @@
+
+.post-article-main-image{
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.post-article-main-image-mobile{
+    height: 41%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.post-article-author-1{
+    display: inline-flex;
+    /* margin-top: 2em; */
+    margin-bottom: 2em;
+}
+
+.post-article-author-1 img{
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    display: block;
+    vertical-align: middle;
+}
+
+.post-article-author-1 .author-detail{
+
+}
+
+.post-article-title{
+    line-height: 48px;
+    font-size: 40px;
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+    color: rgba(0, 0, 0, 0.84);
+    font-weight: 400;
+    letter-spacing: 0px;
+    font-style: normal;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    text-rendering: optimizeLegibility;
+}
+
+.post-article-content{
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+    font-size: 21px;
+    color: rgba(0, 0, 0, 0.84);
+    line-height: 1.58;
+    letter-spacing: -0.004em;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    overflow-wrap: break-word;
+}

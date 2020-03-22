@@ -8,7 +8,11 @@
 
 
 class Categories extends CI_Controller{
-    
+    public function __construct(){
+        parent::__construct();
+        $this->load->library('session');
+    }
+
     public function index(){
         $data['title']="categories";
         $data['categories'] = $this->category_model->get_categories();

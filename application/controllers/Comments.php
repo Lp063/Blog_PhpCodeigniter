@@ -15,6 +15,7 @@ class Comments extends CI_Controller{
     function __construct() {
         parent::__construct();
         $this->load->library('form_validation');
+        $this->load->library('session');
     } 
     public function create($post_id){
         $slug = $this->input->post('slug');

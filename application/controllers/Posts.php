@@ -10,7 +10,9 @@ class Posts extends CI_Controller{
     public function __construct(){
         parent::__construct();
         $this->load->library('pagination');
+        $this->load->library('session');
     }
+    
     public function index($offset = 0){
 
         /* $config['base_url'] = base_url().'posts/index';
@@ -60,7 +62,8 @@ class Posts extends CI_Controller{
         $assets['assets']=[
             "js"=>[
             ],
-            "css"=>[  
+            "css"=>[
+                base_url()."assets/css/posts/view.css"
             ]
         ];
 
